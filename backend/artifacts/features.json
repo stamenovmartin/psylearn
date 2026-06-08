@@ -1,0 +1,20 @@
+{
+  "features": [
+    "intrinsic_motivation_score",
+    "extrinsic_motivation_score",
+    "pressure_motivation_score",
+    "learning_goal_score",
+    "performance_goal_score",
+    "avoidance_goal_score",
+    "deep_learning_score",
+    "surface_learning_score",
+    "last_minute_score",
+    "memory_visual_score",
+    "memory_association_score",
+    "memory_repetition_score",
+    "social_energy_score",
+    "introversion_score",
+    "stress_score",
+    "organization_score"
+  ]
+}

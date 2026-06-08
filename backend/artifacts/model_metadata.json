@@ -1,0 +1,458 @@
+{
+  "model_type": "RandomForestClassifier",
+  "version": "1.0.0",
+  "trained_at": "2026-06-13T10:04:31.147855+00:00",
+  "n_samples": 3000,
+  "n_train": 2400,
+  "n_test": 600,
+  "n_estimators": 200,
+  "features": [
+    "intrinsic_motivation_score",
+    "extrinsic_motivation_score",
+    "pressure_motivation_score",
+    "learning_goal_score",
+    "performance_goal_score",
+    "avoidance_goal_score",
+    "deep_learning_score",
+    "surface_learning_score",
+    "last_minute_score",
+    "memory_visual_score",
+    "memory_association_score",
+    "memory_repetition_score",
+    "social_energy_score",
+    "introversion_score",
+    "stress_score",
+    "organization_score"
+  ],
+  "targets": [
+    "motivation_type",
+    "learning_orientation",
+    "study_style",
+    "recommended_memory_method",
+    "personality_profile",
+    "stress_risk"
+  ],
+  "classes": {
+    "motivation_type": [
+      "extrinsic",
+      "intrinsic",
+      "mixed",
+      "pressure_based"
+    ],
+    "learning_orientation": [
+      "avoidance_oriented",
+      "learning_goal_oriented",
+      "mixed_orientation",
+      "performance_goal_oriented"
+    ],
+    "study_style": [
+      "deep_learner",
+      "last_minute_learner",
+      "mixed_learner",
+      "surface_learner"
+    ],
+    "recommended_memory_method": [
+      "association_method",
+      "first_letter_method",
+      "method_of_loci",
+      "repetition",
+      "story_method",
+      "teach_someone_else"
+    ],
+    "personality_profile": [
+      "ambivert",
+      "extrovert",
+      "introvert"
+    ],
+    "stress_risk": [
+      "high",
+      "low",
+      "moderate"
+    ]
+  },
+  "metrics": {
+    "motivation_type": {
+      "accuracy": 0.965,
+      "precision_macro": 0.942,
+      "recall_macro": 0.9507,
+      "f1_macro": 0.946,
+      "labels": [
+        "intrinsic",
+        "extrinsic",
+        "mixed",
+        "pressure_based"
+      ],
+      "confusion_matrix": [
+        [
+          173,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          151,
+          7,
+          2
+        ],
+        [
+          3,
+          4,
+          55,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          200
+        ]
+      ]
+    },
+    "learning_orientation": {
+      "accuracy": 0.965,
+      "precision_macro": 0.946,
+      "recall_macro": 0.9652,
+      "f1_macro": 0.9531,
+      "labels": [
+        "learning_goal_oriented",
+        "performance_goal_oriented",
+        "avoidance_oriented",
+        "mixed_orientation"
+      ],
+      "confusion_matrix": [
+        [
+          213,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          147,
+          0,
+          14
+        ],
+        [
+          0,
+          1,
+          147,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          72
+        ]
+      ]
+    },
+    "study_style": {
+      "accuracy": 0.9517,
+      "precision_macro": 0.9302,
+      "recall_macro": 0.9521,
+      "f1_macro": 0.9393,
+      "labels": [
+        "deep_learner",
+        "surface_learner",
+        "last_minute_learner",
+        "mixed_learner"
+      ],
+      "confusion_matrix": [
+        [
+          176,
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          203,
+          2,
+          13
+        ],
+        [
+          1,
+          1,
+          124,
+          0
+        ],
+        [
+          4,
+          1,
+          0,
+          68
+        ]
+      ]
+    },
+    "recommended_memory_method": {
+      "accuracy": 0.9217,
+      "precision_macro": 0.8954,
+      "recall_macro": 0.9341,
+      "f1_macro": 0.9119,
+      "labels": [
+        "method_of_loci",
+        "association_method",
+        "story_method",
+        "first_letter_method",
+        "repetition",
+        "teach_someone_else"
+      ],
+      "confusion_matrix": [
+        [
+          180,
+          6,
+          2,
+          3,
+          4,
+          10
+        ],
+        [
+          1,
+          52,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          33,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          1,
+          105,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          2,
+          0,
+          123,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          60
+        ]
+      ]
+    },
+    "personality_profile": {
+      "accuracy": 0.9983,
+      "precision_macro": 0.9979,
+      "recall_macro": 0.9985,
+      "f1_macro": 0.9982,
+      "labels": [
+        "introvert",
+        "ambivert",
+        "extrovert"
+      ],
+      "confusion_matrix": [
+        [
+          226,
+          0,
+          0
+        ],
+        [
+          0,
+          156,
+          0
+        ],
+        [
+          0,
+          1,
+          217
+        ]
+      ]
+    },
+    "stress_risk": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "labels": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "confusion_matrix": [
+        [
+          222,
+          0,
+          0
+        ],
+        [
+          0,
+          140,
+          0
+        ],
+        [
+          0,
+          0,
+          238
+        ]
+      ]
+    }
+  },
+  "feature_importances": {
+    "motivation_type": {
+      "intrinsic_motivation_score": 0.2268,
+      "extrinsic_motivation_score": 0.2128,
+      "pressure_motivation_score": 0.259,
+      "learning_goal_score": 0.0254,
+      "performance_goal_score": 0.0241,
+      "avoidance_goal_score": 0.0184,
+      "deep_learning_score": 0.0281,
+      "surface_learning_score": 0.0235,
+      "last_minute_score": 0.0195,
+      "memory_visual_score": 0.0229,
+      "memory_association_score": 0.0244,
+      "memory_repetition_score": 0.022,
+      "social_energy_score": 0.0215,
+      "introversion_score": 0.0219,
+      "stress_score": 0.0283,
+      "organization_score": 0.0214
+    },
+    "learning_orientation": {
+      "intrinsic_motivation_score": 0.0232,
+      "extrinsic_motivation_score": 0.0189,
+      "pressure_motivation_score": 0.0188,
+      "learning_goal_score": 0.2198,
+      "performance_goal_score": 0.2863,
+      "avoidance_goal_score": 0.2325,
+      "deep_learning_score": 0.0227,
+      "surface_learning_score": 0.0186,
+      "last_minute_score": 0.0175,
+      "memory_visual_score": 0.022,
+      "memory_association_score": 0.0217,
+      "memory_repetition_score": 0.0202,
+      "social_energy_score": 0.0174,
+      "introversion_score": 0.0179,
+      "stress_score": 0.0244,
+      "organization_score": 0.0179
+    },
+    "study_style": {
+      "intrinsic_motivation_score": 0.0267,
+      "extrinsic_motivation_score": 0.021,
+      "pressure_motivation_score": 0.0216,
+      "learning_goal_score": 0.0263,
+      "performance_goal_score": 0.0242,
+      "avoidance_goal_score": 0.0184,
+      "deep_learning_score": 0.2425,
+      "surface_learning_score": 0.2274,
+      "last_minute_score": 0.2085,
+      "memory_visual_score": 0.0252,
+      "memory_association_score": 0.0235,
+      "memory_repetition_score": 0.0227,
+      "social_energy_score": 0.0213,
+      "introversion_score": 0.0205,
+      "stress_score": 0.0264,
+      "organization_score": 0.044
+    },
+    "recommended_memory_method": {
+      "intrinsic_motivation_score": 0.0241,
+      "extrinsic_motivation_score": 0.0189,
+      "pressure_motivation_score": 0.019,
+      "learning_goal_score": 0.0236,
+      "performance_goal_score": 0.0207,
+      "avoidance_goal_score": 0.0175,
+      "deep_learning_score": 0.1236,
+      "surface_learning_score": 0.02,
+      "last_minute_score": 0.0285,
+      "memory_visual_score": 0.1249,
+      "memory_association_score": 0.1106,
+      "memory_repetition_score": 0.1829,
+      "social_energy_score": 0.1337,
+      "introversion_score": 0.026,
+      "stress_score": 0.0233,
+      "organization_score": 0.1028
+    },
+    "personality_profile": {
+      "intrinsic_motivation_score": 0.0154,
+      "extrinsic_motivation_score": 0.012,
+      "pressure_motivation_score": 0.0122,
+      "learning_goal_score": 0.0142,
+      "performance_goal_score": 0.0155,
+      "avoidance_goal_score": 0.0116,
+      "deep_learning_score": 0.0161,
+      "surface_learning_score": 0.0129,
+      "last_minute_score": 0.0113,
+      "memory_visual_score": 0.0144,
+      "memory_association_score": 0.0148,
+      "memory_repetition_score": 0.0116,
+      "social_energy_score": 0.4958,
+      "introversion_score": 0.3148,
+      "stress_score": 0.0151,
+      "organization_score": 0.0123
+    },
+    "stress_risk": {
+      "intrinsic_motivation_score": 0.0117,
+      "extrinsic_motivation_score": 0.0092,
+      "pressure_motivation_score": 0.0095,
+      "learning_goal_score": 0.0116,
+      "performance_goal_score": 0.0109,
+      "avoidance_goal_score": 0.0078,
+      "deep_learning_score": 0.0122,
+      "surface_learning_score": 0.0081,
+      "last_minute_score": 0.0087,
+      "memory_visual_score": 0.0101,
+      "memory_association_score": 0.01,
+      "memory_repetition_score": 0.0089,
+      "social_energy_score": 0.0085,
+      "introversion_score": 0.0096,
+      "stress_score": 0.8547,
+      "organization_score": 0.0085
+    }
+  },
+  "label_distributions": {
+    "motivation_type": {
+      "intrinsic": 909,
+      "pressure_based": 900,
+      "extrinsic": 861,
+      "mixed": 330
+    },
+    "learning_orientation": {
+      "learning_goal_oriented": 984,
+      "avoidance_oriented": 783,
+      "performance_goal_oriented": 781,
+      "mixed_orientation": 452
+    },
+    "study_style": {
+      "deep_learner": 978,
+      "surface_learner": 964,
+      "last_minute_learner": 701,
+      "mixed_learner": 357
+    },
+    "recommended_memory_method": {
+      "method_of_loci": 1121,
+      "repetition": 593,
+      "first_letter_method": 467,
+      "teach_someone_else": 345,
+      "association_method": 300,
+      "story_method": 174
+    },
+    "personality_profile": {
+      "extrovert": 1112,
+      "introvert": 1095,
+      "ambivert": 793
+    },
+    "stress_risk": {
+      "high": 1269,
+      "low": 1008,
+      "moderate": 723
+    }
+  },
+  "data_note": "Models are trained on SYNTHETIC data with rule-based labels. This is an educational prototype based on psychology course concepts, not a clinical or diagnostic instrument."
+}

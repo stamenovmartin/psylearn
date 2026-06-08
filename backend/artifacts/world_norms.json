@@ -1,0 +1,31 @@
+{
+  "source": "Open-Source Psychometrics Project \u2014 IPIP Big-Five Factor Markers",
+  "source_url": "https://openpsychometrics.org/_rawdata/",
+  "license": "Public Domain",
+  "n_respondents": 19719,
+  "n_scored": 19718,
+  "scale": "Per-item 1-5 agreement (reverse-keyed items inverted)",
+  "note": "Means and standard deviations computed directly from real respondents by build_world_norms.py \u2014 not synthetic. Big Five traits are used as an approximate real-world benchmark for the app's related sub-scores.",
+  "traits": {
+    "Extraversion": {
+      "mean": 3.011,
+      "sd": 0.922
+    },
+    "Neuroticism": {
+      "mean": 3.097,
+      "sd": 0.862
+    },
+    "Agreeableness": {
+      "mean": 3.845,
+      "sd": 0.715
+    },
+    "Conscientiousness": {
+      "mean": 3.347,
+      "sd": 0.731
+    },
+    "Openness": {
+      "mean": 3.909,
+      "sd": 0.626
+    }
+  }
+}
