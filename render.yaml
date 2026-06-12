@@ -1,0 +1,30 @@
+# Render.com blueprint (optional convenience).
+# Deploys the backend as a Docker web service and the frontend as a static site.
+# You can also deploy each part manually — see README "How to deploy".
+services:
+  # ---- Backend API (Docker) ---------------------------------------------- #
+  - type: web
+    name: psylearn-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false   # set this to your deployed frontend URL after first deploy
+
+  # ---- Frontend (static site) -------------------------------------------- #
+  - type: web
+    name: psylearn-frontend
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    rootDir: ./frontend
+    envVars:
+      - key: VITE_API_URL
+        sync: false   # set this to your deployed backend URL
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
